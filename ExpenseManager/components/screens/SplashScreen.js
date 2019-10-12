@@ -3,16 +3,23 @@ import { StyleSheet, View, Text } from 'react-native'
 import Colors from '../../utils/Colors'
 
 
+
 export default class SplashScreen extends Component {
+    componentDidMount(){
+        setTimeout(()=>{
+          this.props.navigation.navigate('MainScreen')
+        }, 5000);
+      }
     render() {
         return (
             <View style={StyleSheet.container}>
                 <Text style={styles.title}>Scott's Super Simple Expense Manager</Text>
             </View>
         )
+        }
     }
-}
 
+   
 
 const styles = StyleSheet.create({
     container: {
